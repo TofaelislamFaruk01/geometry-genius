@@ -5,20 +5,32 @@ console.log(" utilities");
 
 function getValueById(boxId)
 {
+    
     const boxValue = document.getElementById(boxId);
   //  console.log(boxValue);
     const boxValueString = boxValue.value;
+    if (boxValueString == '')
+    {
+        return false;
+        }
     const value = parseFloat(boxValueString);
     return value;
 }
  // check it is a positive number or not
 function check(num1, num2)
 {
-     if (num1 >= 0 && num2 >= 0) {
+    if (num1 === false || num2 === false) {
+        alert('input field can not be empty');
+        //return 0;
+    }
+    else if(num1 <0 || num2 <0){
+        alert('please enter a positive number');
+    }
+    else if (num1 >= 0 && num2 >= 0) {
          return 1;
     }
     else {
-        alert('please enter a positive number');
+        alert('please enter intiger value');
     }
 
 }
