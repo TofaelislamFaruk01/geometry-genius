@@ -22,37 +22,6 @@ function check(num1, num2)
     }
 
 }
-// set value by id
-
-function setValueById(boxid , value)
-{
-    const areaBoxId = document.getElementById(boxid);
-    areaBoxId.innerText = value;
-}
-
-// set the value inside the area
-
-function setValue(area, cnt, shape)
-{
-    const areaBox = document.getElementById('box-area');
-    console.log(areaBox);
-    const section = document.createElement('div');
-    section.innerHTML = `
-    
-     <p> <span id="cnt">1</span>.<span id="shape">shape</span> </p>
-     <p><span id="area">1200.98</span>cm<sup>2</sup> </p>
-    <button class="btn btn-primary area-btn" type="submit">convert to m<sup>2</sup> </button>
-    
-    `
-    areaBox.appendChild(section);
-   
-    section.classList.add("d-flex", "justify-content-between", "align-items-center");
-
-    setValueById('cnt', cnt);
-    setValueById('shape', shape);
-    setValueById('area', area);
-    return 0;
-}
 
 // empty to all
 function empty(box1,box2)
@@ -63,4 +32,37 @@ function empty(box1,box2)
     inputField2.value = '';
 }
 
+// set the value inside the calculation area box
+
+function setValue(area, cnt, shape)
+{
+    const areaBox = document.getElementById('box-area');
+    console.log(areaBox);
+    const div = document.createElement('div');
+    div.classList.add("d-flex", "justify-content-between", "align-items-center");
+
+    const p1 = cnt + '.' + shape;
+    console.log(p1);
+    const para1 = document.createElement('p');
+    para1.innerText = p1;
+    div.append(para1);
+
+    const p2 = document.createElement('p');
+    p2.innerHTML = `cm<sup>2</sup>
+    `
+    console.log(p2);
+   // div.append(p2);
+    const para2 = document.createElement('p');
+    para2.innerText = area +' '+ p2.innerText;
+    console.log(para2);
+    div.append(para2);
+
+    const button = document.createElement('button');
+    button.innerHTML = `convert to m<sup>2</sup>
+    `
+    button.classList.add('btn', 'btn-info', 'btn-outline-primary', 'text-white');
+    div.append(button);
+    areaBox.appendChild(div);
+    return 0;
+}
 
