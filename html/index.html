@@ -14,6 +14,7 @@
         .card img {
             width: 220px;
             height: 170px;
+            background-color: rgb(34, 56, 143);
         }
     </style> -->
 </head>
@@ -26,7 +27,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand fw-light"><span class="fw-bold fs-2">Interactive</span> <br>
                         Geometry Genius</a>
-                    <button class="btn btn-info btn-outline-primary text-white" type="submit">Search</button>
+                    <button class="btn btn-info btn-outline-primary text-white px-4" id="blog-btn" type="submit">Blog</button>
                 </div>
             </nav>
         </section>
@@ -42,7 +43,7 @@
                         <div>
                             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 text-center">
                                 <div class="col">
-                                    <div class="card h-100 bg-danger-subtle">
+                                    <div class="card h-100" id="triColor">
                                         <img src="/images/triangle.png" class="card-img-top mx-auto p-4" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-Title fw-bolder fs-3">Triangle</h5>
@@ -57,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100">
+                                    <div class="card h-100" id="rectangleColor">
                                         <img src="/images/rectangle.png" class="card-img-top mx-auto p-4" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-Title fw-bolder fs-3">Rectangle</h5>
@@ -72,7 +73,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100">
+                                    <div class="card h-100" id="paraColor">
                                         <img src="/images/parallelogram.png" class="card-img-top mx-auto p-4" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-Title fw-bolder fs-3">parallelogram</h5>
@@ -87,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100 bg-info-subtle">
+                                    <div class="card h-100" id="rhombusColor">
                                         <img src="/images/rhombus.png" class="card-img-top mx-auto p-4" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-Title fw-bolder fs-3">Rhombus</h5>
@@ -102,7 +103,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100">
+                                    <div class="card h-100" id="penColor">
                                         <img src="/images/pentagon.png" class="card-img-top mx-auto p-4" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-Title fw-bolder fs-3">Pentagon</h5>
@@ -117,13 +118,13 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card h-100">
+                                    <div class="card h-100" id="ellColor">
 
                                         <img src="/images/ellipse.png" class="card-img-top mx-auto p-4" alt="...">
 
                                         <div class="card-body h-50">
                                             <h5 class="card-Title fw-bolder fs-3">Ellipse</h5>
-                                            <p class="card-text">Area (A) = pi* ab</p>
+                                            <p class="card-text">Area (A) = πab</p>
                                             <input class="w-25 bg-body-secondary border-0 " type="text" name="" id="ell1"
                                                 placeholder="b"> cm
                                             <input class="w-25 bg-body-secondary border-0" type="text" name="" id="ell2"
@@ -158,6 +159,7 @@
     </main>
     <script src="/js/main.js"></script>
     <script src="/utilities/utilities.js"></script>
+    <script src="/js/mouseHover.js"></script>
     <script src="/js/calculation.js"></script>
 
 </body>

@@ -9,3 +9,4 @@ for (const image of imageCollections)
     image.style.width = '220px';
     image.style.height = '170px';
 }
+

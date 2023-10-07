@@ -30,7 +30,7 @@ function check(num1, num2)
          return 1;
     }
     else {
-        alert('please enter intiger value');
+        alert('please enter integer value');
     }
 
 }
@@ -49,6 +49,7 @@ function empty(box1,box2)
 function setValue(area, cnt, shape)
 {
     const areaBox = document.getElementById('box-area');
+    areaBox.style.fontWeight='200';
     console.log(areaBox);
     const div = document.createElement('div');
     div.classList.add("d-flex", "justify-content-between", "align-items-center");
@@ -78,3 +79,30 @@ function setValue(area, cnt, shape)
     return 0;
 }
 
+
+// random color generate
+
+function randomColor(boxId)
+{ 
+        let color = [];
+        for (let i = 0; i < 3; i++) {
+            let number1= Math.random();
+            console.log(number1);
+            number1 = number1* 256;
+            console.log(number1);
+            let number= Math.floor(number1);
+            console.log(number);
+
+          color.push(number);
+        }
+     
+        var p= color.join(',');
+        
+        // background-color: rgb(34, 56, 143);
+
+        p = 'rgb(' + p + ')';
+        console.log(p);
+        const bg= document.getElementById(boxId);
+        console.log(bg);
+        bg.style.background=p;
+}

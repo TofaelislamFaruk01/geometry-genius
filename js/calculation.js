@@ -1,5 +1,12 @@
 console.log("calc");
 let cnt = 0;
+// blog button
+
+document.getElementById('blog-btn').addEventListener('click',function(){
+
+     window.location.href='http://127.0.0.1:5500/html/blog.html';
+    console.log(34972);
+})
 
 // triangle button
 
@@ -19,6 +26,7 @@ document.getElementById('calcT').addEventListener('click', function () {
         
     }
     empty('baseT','heightT');
+   // var p=randomColor('triColor');
 })
 
 // rectangle button
