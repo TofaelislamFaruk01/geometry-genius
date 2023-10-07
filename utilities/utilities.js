@@ -106,3 +106,14 @@ function randomColor(boxId)
         console.log(bg);
         bg.style.background=p;
 }
+
+// edit the input fields
+
+ function editBox(fieldId){
+
+    const editor = document.getElementById(fieldId);
+    console.log(editor);
+    editor.classList.remove('d-none');
+    // editor.style.display='block';
+
+ }
