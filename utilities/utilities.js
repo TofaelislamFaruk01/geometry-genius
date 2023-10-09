@@ -44,7 +44,7 @@ function empty(box1,box2)
     inputField2.value = '';
 }
 
-// set the value inside the calculation area box
+// set the calculation value inside the calculation area box
 
 function setValue(area, cnt, shape)
 {
